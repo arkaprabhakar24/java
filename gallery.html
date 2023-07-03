@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vintage Repairs</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tips.html">Tips for Repair</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="purchase.html">Product Purchase</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="gallery">
+        <h1><center>Gallery</center></h1>
+        <p>Take a look at some of our recent repair projects:</p>
+        <div class="gallery-images">
+          <div class="image-container">
+            <img src="9.jpg" alt="Repair Project 1">
+            <div class="image-overlay">
+              <h3>Restored 1981 Mount Bicycle</h3>
+              <p>Click to view details</p>
+            </div>
+          </div>
+          <div class="image-container">
+            <img src="10.jpg" alt="Repair Project 2">
+            <div class="image-overlay">
+              <h3>Repaired 1979 crown jewellery</h3>
+              <p>Click to view details</p>
+            </div>
+          </div>
+          <div class="image-container">
+            <img src="11.jpg" alt="Repair Project 3">
+            <div class="image-overlay">
+              <h3>1984 toy train (Repaired)</h3>
+              <p>Click to view details</p>
+            </div>
+          </div>
+        </div>
+        <div class="image-details" id="image-details">
+          <h3>Repair Project Details</h3>
+          <div id="project-details"></div>
+        </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Vintage Repairs.</a></p>
+  </footer>
+
+  <script>
+    // Interactive functionality to display project details
+    const imageContainers = document.querySelectorAll(".image-container");
+    const projectDetails = document.getElementById("project-details");
+    const imageDetails = document.getElementById("image-details");
+
+    imageContainers.forEach((container, index) => {
+      container.addEventListener("click", () => {
+        projectDetails.innerHTML = `
+          <img src="repair_project_${index + 1}.jpg" alt="Repair Project ${index + 1}">
+          <h4>Repair Project ${index + 1}</h4>
+          <p>All the projects are restored and repaired by our trained artists who value and care for vintage materials.</p>
+        `;
+
+        imageDetails.style.display = "block";
+      });
+    });
+  </script>
+</body>
+</html>

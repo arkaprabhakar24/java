@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vintage Repairs</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="tips.html">Tips for Repair</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="purchase.html">Product Purchase</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="purchase">
+        <h2>Purchase</h2>
+        <p><marquee>Check out our assorted and ranged selection of refurbished vintage items that are available for purchase: (Only 3 products available only due to high demand)</marquee></p>
+        <div class="product-container">
+          <div class="product">
+            <img src="a.jpg" alt="Product 1" width="250" height="250">
+            <div class="product-details">
+              <h3>Classic Restored 1971 Lavy's Ornate Leather Bag</h3>
+              <p><b><i>Price: $419.00</i></b></p>
+              <button class="popup-button" onclick="openPopup('Product 1')">Buy Product</button>
+            </div>
+          </div>
+          <div class="product">
+            <img src="b.jpg" alt="Product 2" width="250" height="250">
+            <div class="product-details">
+              <h3>Restored Vintage 1973 Tissot Watch</h3>
+              <p><b><i>Price: $659.61</i></b></p>
+              <button class="popup-button" onclick="openPopup('Product 2')">Buy Product</button>
+            </div>
+          </div>
+          <div class="product">
+            <img src="c.jpg" alt="Product 3" width="250" height="250">
+            <div class="product-details">
+              <h3>Deluxe Restored 1975 Gameboy Video Player</h3>
+              <p><b><i>Price: $185.99</i></b></p>
+              <button class="popup-button" onclick="openPopup('Product 3')">Buy Product</button>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- Popup dialog for "Under Construction" message -->
+    <div id="popup-overlay">
+      <div id="popup-dialog">
+        <h2>Under Construction</h2>
+        <p>The online store and ordering functionality are currently under construction. We apologize for any inconvenience caused. Please check back soon!</p>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Vintage Repairs.</a></p>
+  </footer>
+
+  <script>
+    function openPopup(productName) {
+  var popupOverlay = document.getElementById("popup-overlay");
+  var popupDialog = document.getElementById("popup-dialog");
+  popupOverlay.style.display = "block";
+  popupDialog.style.display = "block";
+}
+
+function closePopup() {
+  var popupOverlay = document.getElementById("popup-overlay");
+  var popupDialog = document.getElementById("popup-dialog");
+  popupOverlay.style.display = "none";
+  popupDialog.style.display = "none";
+}
+
+  </script>
+</body>
+</html>
